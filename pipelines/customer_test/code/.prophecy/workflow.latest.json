@@ -1,0 +1,237 @@
+{
+  "metainfo" : {
+    "migrationVersions" : {
+      "gemBuilderVersion" : "v1"
+    },
+    "functions" : { },
+    "codeGenConfiguration" : {
+      "editableConfig" : true,
+      "plibVersion" : {
+        "mavenVersion" : "8.2.0-SNAPSHOT",
+        "pyPiVersion" : "1.9.16"
+      },
+      "sparkConfigJinjaEnabled" : true
+    },
+    "id" : "1",
+    "uri" : "pipelines/customer_test",
+    "pipelineSettingsInfo" : {
+      "applicationName" : "customer_test",
+      "hasApplication" : true,
+      "isFunctionsPackageDirDefined" : true
+    },
+    "language" : "python",
+    "fabricId" : "2512",
+    "frontEndLanguage" : "sql",
+    "mode" : "batch",
+    "udfs" : {
+      "language" : "python",
+      "udfs" : [ ],
+      "functionPackageName" : "shashankprophecyioteam.dataprocserverlesspoc.functions",
+      "sharedFunctionPackageNames" : [ "prophecy.spark_basic.functions", "prophecy.warehouse.functions" ]
+    },
+    "udafs" : {
+      "language" : "python",
+      "code" : ""
+    },
+    "configuration" : {
+      "common" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "oldCommon" : {
+        "type" : "record",
+        "fields" : [ ]
+      },
+      "fabrics" : { },
+      "instances" : { },
+      "selected" : "default",
+      "nonEditable" : [ ],
+      "isSubscribedPipelineWithPipelineConfigs" : false
+    },
+    "sparkConf" : [ ],
+    "hadoopConf" : [ ],
+    "codeMode" : "sparse",
+    "buildSystem" : "maven",
+    "externalDependencies" : [ ],
+    "dependentProjectExternalDependencies" : [ {
+      "projectUID" : "42",
+      "projectName" : "ProphecySparkBasicsPython",
+      "externalDependencies" : [ ]
+    }, {
+      "projectUID" : "43",
+      "projectName" : "ProphecyWarehousePython",
+      "externalDependencies" : [ ]
+    } ],
+    "isImported" : false,
+    "interimMode" : "Full",
+    "interimModeEnabled" : true,
+    "visualCodeInterimMode" : "Disabled",
+    "recordsLimit" : {
+      "enabled" : false,
+      "value" : 1000
+    },
+    "topLevelPackage" : "customer_test",
+    "configurationVersion" : "v2"
+  },
+  "connections" : [ {
+    "id" : "-atj8iNTuPXcmxmoPvCwe",
+    "source" : "YV05ZLADw1O3hAedAlAfJ$$kbD9xZOKOWZlSVnQXlHZN",
+    "sourcePort" : "jc1jjWjaPeTLC7OD0gdUq$$BafbmGNp-jJvAcUFkBPvp",
+    "target" : "24BKq9vagahGLR5Uruiwq$$4i8H4Ou-QkNzm7PppQQSq",
+    "targetPort" : "KwpKQrKFZSp2uwRAJ53Ii$$ph5qF8gRc5HM8f1Oyz9EI"
+  }, {
+    "id" : "fBU_DRSKjBvUuAv1_LYUN$$uvpz85ltLgUqr2myua9JE",
+    "source" : "24BKq9vagahGLR5Uruiwq$$4i8H4Ou-QkNzm7PppQQSq",
+    "sourcePort" : "I-amvP_UvzEP63S1sa6cf$$rBblhTzGHnDnSgjyAtVT8",
+    "target" : "mDgGx_l9bKkdOFAvF7e1S$$Iv-azBfvWnXmOYCPI4AJo",
+    "targetPort" : "ZAU0bM5Vvw1aa6uUbf_YR$$7cA4vOm99_isQhP6pmxKr"
+  } ],
+  "processes" : {
+    "YV05ZLADw1O3hAedAlAfJ$$kbD9xZOKOWZlSVnQXlHZN" : {
+      "id" : "YV05ZLADw1O3hAedAlAfJ$$kbD9xZOKOWZlSVnQXlHZN",
+      "component" : "Source",
+      "metadata" : {
+        "label" : "customer_read",
+        "slug" : "customer_read",
+        "x" : -500,
+        "y" : -220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ ],
+        "outputs" : [ {
+          "id" : "jc1jjWjaPeTLC7OD0gdUq$$BafbmGNp-jJvAcUFkBPvp",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/customer_read"
+      }
+    },
+    "24BKq9vagahGLR5Uruiwq$$4i8H4Ou-QkNzm7PppQQSq" : {
+      "id" : "24BKq9vagahGLR5Uruiwq$$4i8H4Ou-QkNzm7PppQQSq",
+      "component" : "Limit",
+      "metadata" : {
+        "label" : "limit",
+        "slug" : "limit",
+        "x" : -140,
+        "y" : -220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Retrieves the first 10 records from the dataset for quick review.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "KwpKQrKFZSp2uwRAJ53Ii$$ph5qF8gRc5HM8f1Oyz9EI",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ {
+          "id" : "I-amvP_UvzEP63S1sa6cf$$rBblhTzGHnDnSgjyAtVT8",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "limit" : "10"
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_42.git&subPath=&tag=0.2.28.dev6&projectSubscriptionProjectId=42&path=gems/Limit",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
+    },
+    "mDgGx_l9bKkdOFAvF7e1S$$Iv-azBfvWnXmOYCPI4AJo" : {
+      "id" : "mDgGx_l9bKkdOFAvF7e1S$$Iv-azBfvWnXmOYCPI4AJo",
+      "component" : "Target",
+      "metadata" : {
+        "label" : "customer_write",
+        "slug" : "customer_write",
+        "x" : 80,
+        "y" : -220,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "ZAU0bM5Vvw1aa6uUbf_YR$$7cA4vOm99_isQhP6pmxKr",
+          "slug" : "in0"
+        } ],
+        "outputs" : [ ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "datasetId" : "datasets/customer_write"
+      }
+    }
+  },
+  "ports" : {
+    "inputs" : [ ],
+    "outputs" : [ ],
+    "selectedInputFields" : [ ],
+    "isCustomOutputSchema" : false,
+    "autoUpdateOnRun" : false
+  },
+  "diagnostics" : [ {
+    "property" : "$.workflow.processes.YV05ZLADw1O3hAedAlAfJ$$kbD9xZOKOWZlSVnQXlHZN.properties.dataset.schema",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "Missing Schema. Please infer schema or provide it manually.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.24BKq9vagahGLR5Uruiwq$$4i8H4Ou-QkNzm7PppQQSq",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  }, {
+    "property" : "$.workflow.processes.mDgGx_l9bKkdOFAvF7e1S$$Iv-azBfvWnXmOYCPI4AJo",
+    "range" : {
+      "start" : {
+        "line" : 0,
+        "character" : 0
+      },
+      "end" : {
+        "line" : 0,
+        "character" : 0
+      }
+    },
+    "severity" : 2,
+    "message" : "One of the upstream gems is broken. Please, fix it first.",
+    "tags" : [ ],
+    "relatedInformation" : [ ]
+  } ]
+}
