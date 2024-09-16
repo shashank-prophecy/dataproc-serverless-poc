@@ -161,7 +161,9 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Exports customer data to a CSV file for further analysis or reporting.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {

@@ -78,18 +78,18 @@ sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies:
-- modifiedAt: '2024-09-16T14:02:56.387408Z'
+- type: plibMaven
+  modifiedAt: '2024-09-16T15:51:41.813162Z'
   name: plibMaven
   version: 8.2.0-SNAPSHOT
-  id: '98224999'
-  createdAt: '2024-09-16T14:02:56.387408Z'
-  type: plibMaven
-- modifiedAt: '2024-09-16T14:02:56.387408Z'
+  id: '728058531'
+  createdAt: '2024-09-16T15:51:41.812776Z'
+- type: plibPypi
+  modifiedAt: '2024-09-16T15:51:41.814471Z'
   name: plibPypi
   version: 1.9.16
-  id: '1304596238'
-  createdAt: '2024-09-16T14:02:56.387408Z'
-  type: plibPypi
+  id: '1755266500'
+  createdAt: '2024-09-16T15:51:41.814411Z'
 projectDependencies:
   '42':
     projectUID: 42
