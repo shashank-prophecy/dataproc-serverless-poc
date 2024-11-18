@@ -7,20 +7,21 @@
     "codeGenConfiguration" : {
       "editableConfig" : true,
       "plibVersion" : {
-        "mavenVersion" : "8.2.0-SNAPSHOT",
+        "mavenVersion" : "8.2.1",
         "pyPiVersion" : "1.9.16"
       },
       "sparkConfigJinjaEnabled" : true
     },
     "id" : "1",
     "uri" : "pipelines/customer_test",
+    "sourceSuggestions" : [ ],
     "pipelineSettingsInfo" : {
       "applicationName" : "customer_test",
       "hasApplication" : true,
       "isFunctionsPackageDirDefined" : true
     },
     "language" : "python",
-    "fabricId" : "2512",
+    "fabricId" : "195",
     "frontEndLanguage" : "sql",
     "mode" : "batch",
     "udfs" : {
@@ -36,7 +37,16 @@
     "configuration" : {
       "common" : {
         "type" : "record",
-        "fields" : [ ]
+        "fields" : [ {
+          "name" : "country_code",
+          "kind" : {
+            "type" : "string",
+            "value" : "RU"
+          },
+          "optional" : false,
+          "isWorkflowNodeConfiguration" : false,
+          "isReferenced" : false
+        } ]
       },
       "oldCommon" : {
         "type" : "record",
@@ -54,11 +64,11 @@
     "buildSystem" : "maven",
     "externalDependencies" : [ ],
     "dependentProjectExternalDependencies" : [ {
-      "projectUID" : "42",
+      "projectUID" : "224",
       "projectName" : "ProphecySparkBasicsPython",
       "externalDependencies" : [ ]
     }, {
-      "projectUID" : "43",
+      "projectUID" : "225",
       "projectName" : "ProphecyWarehousePython",
       "externalDependencies" : [ ]
     } ],
@@ -74,15 +84,15 @@
     "configurationVersion" : "v2"
   },
   "connections" : [ {
-    "id" : "-atj8iNTuPXcmxmoPvCwe",
+    "id" : "mwUElXo0IO1cYJgf_wpNf",
     "source" : "YV05ZLADw1O3hAedAlAfJ$$kbD9xZOKOWZlSVnQXlHZN",
     "sourcePort" : "jc1jjWjaPeTLC7OD0gdUq$$BafbmGNp-jJvAcUFkBPvp",
-    "target" : "24BKq9vagahGLR5Uruiwq$$4i8H4Ou-QkNzm7PppQQSq",
-    "targetPort" : "KwpKQrKFZSp2uwRAJ53Ii$$ph5qF8gRc5HM8f1Oyz9EI"
+    "target" : "ILEWKKwaL_wE5ccpMzUop$$tPNXf0TcnHuE4YgyRTxhs",
+    "targetPort" : "AosCzOl1HA3WlRbo6mDNt$$D21iHkNneNzSdA88A-Qqx"
   }, {
-    "id" : "fBU_DRSKjBvUuAv1_LYUN$$uvpz85ltLgUqr2myua9JE",
-    "source" : "24BKq9vagahGLR5Uruiwq$$4i8H4Ou-QkNzm7PppQQSq",
-    "sourcePort" : "I-amvP_UvzEP63S1sa6cf$$rBblhTzGHnDnSgjyAtVT8",
+    "id" : "6wEGeD-VGh0Xs-jQLuDjG",
+    "source" : "ILEWKKwaL_wE5ccpMzUop$$tPNXf0TcnHuE4YgyRTxhs",
+    "sourcePort" : "N0Wr606BigNz6OB8Pp80Z$$NMtI7S7J-Ba5D8QOlF-Xc",
     "target" : "mDgGx_l9bKkdOFAvF7e1S$$Iv-azBfvWnXmOYCPI4AJo",
     "targetPort" : "ZAU0bM5Vvw1aa6uUbf_YR$$7cA4vOm99_isQhP6pmxKr"
   } ],
@@ -98,7 +108,9 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Reads customer data from a CSV file and returns a DataFrame containing customer information.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ ],
@@ -114,42 +126,6 @@
         "datasetId" : "datasets/customer_read"
       }
     },
-    "24BKq9vagahGLR5Uruiwq$$4i8H4Ou-QkNzm7PppQQSq" : {
-      "id" : "24BKq9vagahGLR5Uruiwq$$4i8H4Ou-QkNzm7PppQQSq",
-      "component" : "Limit",
-      "metadata" : {
-        "label" : "limit",
-        "slug" : "limit",
-        "x" : -140,
-        "y" : -220,
-        "phase" : 0,
-        "cache" : false,
-        "detailedStats" : false,
-        "isImported" : false,
-        "comment" : "Retrieves the first 10 records from the dataset for quick review.",
-        "autoUpdateComment" : true
-      },
-      "ports" : {
-        "inputs" : [ {
-          "id" : "KwpKQrKFZSp2uwRAJ53Ii$$ph5qF8gRc5HM8f1Oyz9EI",
-          "slug" : "in0"
-        } ],
-        "outputs" : [ {
-          "id" : "I-amvP_UvzEP63S1sa6cf$$rBblhTzGHnDnSgjyAtVT8",
-          "slug" : "out"
-        } ],
-        "selectedInputFields" : [ ],
-        "isCustomOutputSchema" : false,
-        "autoUpdateOnRun" : false
-      },
-      "properties" : {
-        "limit" : "10"
-      },
-      "componentInfo" : {
-        "gemId" : "gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_42.git&subPath=&tag=0.2.28.dev6&projectSubscriptionProjectId=42&path=gems/Limit",
-        "projectName" : "ProphecySparkBasicsPython"
-      }
-    },
     "mDgGx_l9bKkdOFAvF7e1S$$Iv-azBfvWnXmOYCPI4AJo" : {
       "id" : "mDgGx_l9bKkdOFAvF7e1S$$Iv-azBfvWnXmOYCPI4AJo",
       "component" : "Target",
@@ -161,12 +137,91 @@
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
-        "isImported" : false
+        "isImported" : false,
+        "comment" : "Writes customer data to a CSV file, including headers and specified separator. Then, concatenates the CSV files into a single output file.",
+        "autoUpdateComment" : true
       },
       "ports" : {
         "inputs" : [ {
           "id" : "ZAU0bM5Vvw1aa6uUbf_YR$$7cA4vOm99_isQhP6pmxKr",
-          "slug" : "in0"
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each customer in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The given name of the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The family name or surname of the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Contact phone number of the customer; formatted as a string with hyphens separating number segments.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Email address of the customer; Used for communication and account-related notifications.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "ISO 2-letter code representing the customer's country of residence.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date when the customer's account was opened; Date is in YYYY-MM-DD format.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Status indicator for the customer account; Uses a single character to denote specific account conditions or privileges.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
         } ],
         "outputs" : [ ],
         "selectedInputFields" : [ ],
@@ -176,6 +231,123 @@
       "properties" : {
         "datasetId" : "datasets/customer_write"
       }
+    },
+    "ILEWKKwaL_wE5ccpMzUop$$tPNXf0TcnHuE4YgyRTxhs" : {
+      "id" : "ILEWKKwaL_wE5ccpMzUop$$tPNXf0TcnHuE4YgyRTxhs",
+      "component" : "Filter",
+      "metadata" : {
+        "label" : "Filter",
+        "slug" : "Filter",
+        "x" : -200,
+        "y" : -380,
+        "phase" : 0,
+        "cache" : false,
+        "detailedStats" : false,
+        "isImported" : false,
+        "comment" : "Filters the DataFrame based on a specific country code.",
+        "autoUpdateComment" : true
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "AosCzOl1HA3WlRbo6mDNt$$D21iHkNneNzSdA88A-Qqx",
+          "slug" : "in0",
+          "schema" : {
+            "type" : "struct",
+            "fields" : [ {
+              "name" : "customer_id",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Unique identifier for each customer in the dataset.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "first_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The given name of the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "last_name",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "The family name or surname of the customer.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "phone",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Contact phone number of the customer; formatted as a string with hyphens separating number segments.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "email",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Email address of the customer; Used for communication and account-related notifications.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "country_code",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "ISO 2-letter code representing the customer's country of residence.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_open_date",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Date when the customer's account was opened; Date is in YYYY-MM-DD format.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            }, {
+              "name" : "account_flags",
+              "type" : "string",
+              "nullable" : true,
+              "metadata" : {
+                "description" : "Status indicator for the customer account; Uses a single character to denote specific account conditions or privileges.",
+                "mappings" : [ ],
+                "tags" : [ ]
+              }
+            } ]
+          },
+          "isStreaming" : false
+        } ],
+        "outputs" : [ {
+          "id" : "N0Wr606BigNz6OB8Pp80Z$$NMtI7S7J-Ba5D8QOlF-Xc",
+          "slug" : "out"
+        } ],
+        "selectedInputFields" : [ ],
+        "isCustomOutputSchema" : false,
+        "autoUpdateOnRun" : false
+      },
+      "properties" : {
+        "columnsSelector" : [ "AosCzOl1HA3WlRbo6mDNt$$D21iHkNneNzSdA88A-Qqx##country_code" ],
+        "condition" : {
+          "format" : "sql",
+          "expression" : "country_code = '$country_code'"
+        }
+      },
+      "componentInfo" : {
+        "gemId" : "gitUri=http://gitserver:3000/wDp16mGH_team_30/QWF0O8MX_project_224.git&subPath=&tag=0.2.28.dev6&projectSubscriptionProjectId=224&path=gems/Filter",
+        "projectName" : "ProphecySparkBasicsPython"
+      }
     }
   },
   "ports" : {
@@ -184,54 +356,5 @@
     "selectedInputFields" : [ ],
     "isCustomOutputSchema" : false,
     "autoUpdateOnRun" : false
-  },
-  "diagnostics" : [ {
-    "property" : "$.workflow.processes.YV05ZLADw1O3hAedAlAfJ$$kbD9xZOKOWZlSVnQXlHZN.properties.dataset.schema",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "Missing Schema. Please infer schema or provide it manually.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.24BKq9vagahGLR5Uruiwq$$4i8H4Ou-QkNzm7PppQQSq",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  }, {
-    "property" : "$.workflow.processes.mDgGx_l9bKkdOFAvF7e1S$$Iv-azBfvWnXmOYCPI4AJo",
-    "range" : {
-      "start" : {
-        "line" : 0,
-        "character" : 0
-      },
-      "end" : {
-        "line" : 0,
-        "character" : 0
-      }
-    },
-    "severity" : 2,
-    "message" : "One of the upstream gems is broken. Please, fix it first.",
-    "tags" : [ ],
-    "relatedInformation" : [ ]
-  } ]
+  }
 }

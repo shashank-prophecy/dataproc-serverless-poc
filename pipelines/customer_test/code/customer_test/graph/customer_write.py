@@ -13,4 +13,14 @@ def customer_write(spark: SparkSession, in0: DataFrame):
         .mode("overwrite")\
         .option("separator", ",")\
         .option("header", True)\
-        .csv("dbfs:/FileStore/data_engg/shashank/customer/customer_output.csv")
+        .csv("gs://bigquery-temp-demo/final_data/customer_output.csv_temp")
+    from prophecy.utils.gems_utils import concatenateFiles
+    concatenateFiles(
+        spark,
+        ".csv",
+        "overwrite",
+        "gs://bigquery-temp-demo/final_data/customer_output.csv_temp",
+        "gs://bigquery-temp-demo/final_data/customer_output.csv",
+        True,
+        True
+    )

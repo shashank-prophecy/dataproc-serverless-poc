@@ -1,0 +1,108 @@
+{
+  "metainfo" : {
+    "type" : "Composer",
+    "fabricId" : "194",
+    "jobId" : "jobs/dataproc_serverles",
+    "name" : "dataproc_serverles",
+    "dagName" : "beta_shashank_dataproc_serverless_poc_dataproc_serverles",
+    "schedule" : "None",
+    "enabled" : false,
+    "alerting" : {
+      "emails" : "",
+      "onStart" : false,
+      "onSuccess" : false,
+      "onFailure" : false
+    },
+    "maxConcurrentRuns" : 1,
+    "processDefaultSettings" : {
+      "ignore_first_depends_on_past" : true,
+      "do_xcom_push" : true
+    },
+    "maxActiveRuns" : 1,
+    "catchup" : false,
+    "scheduleTimeZone" : "UTC",
+    "dagParams" : {
+      "instances" : {
+        "default" : { }
+      },
+      "params" : { },
+      "selected" : "default"
+    },
+    "airflowFunctions" : [ ],
+    "dynamicPipelineStatus" : {
+      "databricks" : false,
+      "dataproc" : false,
+      "emr" : false,
+      "onprem" : false
+    }
+  },
+  "processes" : {
+    "vhxUB0HQFJVVbF8eXE_F4$$XS3hv1mVVCcn6B0_wnRka" : {
+      "id" : "vhxUB0HQFJVVbF8eXE_F4$$XS3hv1mVVCcn6B0_wnRka",
+      "component" : "DataprocPipeline",
+      "metadata" : {
+        "label" : "DataprocPipeline_0",
+        "slug" : "DataprocPipeline_0",
+        "x" : -460,
+        "y" : -440
+      },
+      "ports" : {
+        "inputs" : [ {
+          "id" : "LzKkA_OvxuxoMQYueA3f9$$MyOkW3JyYGCKJewaGxWSi",
+          "slug" : ""
+        } ],
+        "outputs" : [ {
+          "id" : "aYhK2r8fuZH0CWf_covGM$$MMbK8RNIBvFfMDVtpGVOA",
+          "slug" : ""
+        } ]
+      },
+      "settings" : { },
+      "properties" : {
+        "serviceAccount" : "prophecy-field-bq-fabric@prophecy-field.iam.gserviceaccount.com",
+        "dataprocVersion" : "1.2",
+        "job" : null,
+        "projectId" : null,
+        "containerImage" : null,
+        "clusterId" : null,
+        "gcpConnId" : "google_cloud_default",
+        "clusterSize" : "195/small",
+        "region" : null,
+        "clusterType" : "dataprocserverless",
+        "configurations" : {
+          "schema" : [ {
+            "name" : "country_code",
+            "optional" : false,
+            "kind" : {
+              "type" : "string",
+              "value" : "RU"
+            },
+            "isReferenced" : false,
+            "isWorkflowNodeConfiguration" : false
+          } ],
+          "instances" : {
+            "dataproc_serverless_poc" : [ "default", "testing" ]
+          },
+          "overrides" : {
+            "country_code" : {
+              "type" : "literal",
+              "value" : "RU"
+            }
+          },
+          "selectedInstance" : {
+            "type" : "literal",
+            "value" : "testing"
+          }
+        },
+        "batchId" : "test-batch-prophecy",
+        "taskId" : null,
+        "pipelineId" : {
+          "type" : "literal",
+          "value" : "pipelines/customer_test"
+        }
+      },
+      "connections" : [ ],
+      "processes" : { }
+    }
+  },
+  "connections" : [ ]
+}

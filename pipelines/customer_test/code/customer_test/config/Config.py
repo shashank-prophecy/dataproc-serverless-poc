@@ -3,10 +3,11 @@ from prophecy.config import ConfigBase
 
 class Config(ConfigBase):
 
-    def __init__(self, **kwargs):
+    def __init__(self, country_code: str=None, **kwargs):
         self.spark = None
-        self.update()
+        self.update(country_code)
 
-    def update(self, **kwargs):
+    def update(self, country_code: str="RU", **kwargs):
         prophecy_spark = self.spark
+        self.country_code = country_code
         pass

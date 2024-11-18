@@ -6,5 +6,5 @@ from prophecy.libs import typed_lit
 from customer_test.config.ConfigStore import *
 from customer_test.functions import *
 
-def limit(spark: SparkSession, in0: DataFrame) -> DataFrame:
-    return in0.limit(10)
+def Filter(spark: SparkSession, in0: DataFrame) -> DataFrame:
+    return in0.filter((col("country_code") == lit(Config.country_code)))

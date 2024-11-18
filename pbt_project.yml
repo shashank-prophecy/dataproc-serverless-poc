@@ -54,7 +54,33 @@ datasets:
         author: shashank@prophecy.io
         createdAt: '2024-09-16 14:04:57'
 templates: {}
-jobs: {}
+jobs:
+  jobs/dataproc_serverles:
+    name: dataproc_serverles
+    description: ''
+    fabricUID: 194
+    scheduler:
+      Composer: {}
+    cloudProvider: null
+    jobSize: null
+    scheduleCron: None
+    timeout: null
+    alerting:
+      emails: ''
+      onStart: false
+      onSuccess: false
+      onFailure: false
+    pipelines:
+    - pipelines/customer_test
+    jobClusterMode:
+      clusterMode:
+        Single: {}
+      clusterId: null
+    enabled: null
+    createdAt: '2024-11-18 06:33:48'
+    author: shashank@prophecy.io
+    models: []
+    sqlProjects: []
 gemContainer:
   languageVersion: '3.10'
   gemLibsVersion: 1.3.4.0
@@ -78,18 +104,18 @@ sqlSources: {}
 sqlUnreferencedSources: {}
 sqlPipeline: null
 dependencies:
-- modifiedAt: '2024-09-16T14:02:56.387408Z'
+- type: plibMaven
+  modifiedAt: '2024-11-18T06:27:14.064211Z'
   name: plibMaven
-  version: 8.2.0-SNAPSHOT
-  id: '98224999'
-  createdAt: '2024-09-16T14:02:56.387408Z'
-  type: plibMaven
-- modifiedAt: '2024-09-16T14:02:56.387408Z'
+  version: 8.2.1
+  id: '312378069'
+  createdAt: '2024-11-18T06:27:14.064015Z'
+- type: plibPypi
+  modifiedAt: '2024-11-18T06:27:14.065188Z'
   name: plibPypi
   version: 1.9.16
-  id: '1304596238'
-  createdAt: '2024-09-16T14:02:56.387408Z'
-  type: plibPypi
+  id: '751700508'
+  createdAt: '2024-11-18T06:27:14.065139Z'
 projectDependencies:
   '224':
     projectUID: 224

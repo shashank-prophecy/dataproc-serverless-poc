@@ -8,8 +8,8 @@ from customer_test.graph import *
 
 def pipeline(spark: SparkSession) -> None:
     df_customer_read = customer_read(spark)
-    df_limit = limit(spark, df_customer_read)
-    customer_write(spark, df_limit)
+    df_Filter = Filter(spark, df_customer_read)
+    customer_write(spark, df_Filter)
 
 def main():
     spark = SparkSession.builder\

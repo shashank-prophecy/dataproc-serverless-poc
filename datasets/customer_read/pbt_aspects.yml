@@ -1,4 +1,64 @@
 version: 1
 schema:
   type: struct
-  fields: []
+  fields:
+  - name: customer_id
+    type: string
+    nullable: true
+    metadata:
+      description: Unique identifier for each customer in the dataset.
+      mappings: []
+      tags: []
+  - name: first_name
+    type: string
+    nullable: true
+    metadata:
+      description: The given name of the customer.
+      mappings: []
+      tags: []
+  - name: last_name
+    type: string
+    nullable: true
+    metadata:
+      description: The family name or surname of the customer.
+      mappings: []
+      tags: []
+  - name: phone
+    type: string
+    nullable: true
+    metadata:
+      description: Contact phone number of the customer; formatted as a string with
+        hyphens separating number segments.
+      mappings: []
+      tags: []
+  - name: email
+    type: string
+    nullable: true
+    metadata:
+      description: Email address of the customer; Used for communication and account-related
+        notifications.
+      mappings: []
+      tags: []
+  - name: country_code
+    type: string
+    nullable: true
+    metadata:
+      description: ISO 2-letter code representing the customer's country of residence.
+      mappings: []
+      tags: []
+  - name: account_open_date
+    type: string
+    nullable: true
+    metadata:
+      description: Date when the customer's account was opened; Date is in YYYY-MM-DD
+        format.
+      mappings: []
+      tags: []
+  - name: account_flags
+    type: string
+    nullable: true
+    metadata:
+      description: Status indicator for the customer account; Uses a single character
+        to denote specific account conditions or privileges.
+      mappings: []
+      tags: []
