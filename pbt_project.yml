@@ -1,6 +1,6 @@
 name: dataproc_serverless_poc
 description: ''
-version: '3.0'
+version: '4.0'
 author: shashank@prophecy.io
 language: python
 buildSystem: ''
