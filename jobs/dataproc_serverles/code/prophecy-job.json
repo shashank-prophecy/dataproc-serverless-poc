@@ -62,6 +62,7 @@
         "dataprocVersion" : "1.2",
         "job" : null,
         "projectId" : null,
+        "whlFileUris" : [ ],
         "containerImage" : null,
         "clusterId" : null,
         "gcpConnId" : "google_cloud_default",
@@ -93,6 +94,7 @@
             "value" : "testing"
           }
         },
+        "jarFileUris" : [ ],
         "batchId" : "test-batch-prophecy",
         "taskId" : null,
         "pipelineId" : {

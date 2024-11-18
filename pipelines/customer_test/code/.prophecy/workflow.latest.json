@@ -239,7 +239,7 @@
         "label" : "Filter",
         "slug" : "Filter",
         "x" : -200,
-        "y" : -380,
+        "y" : -240,
         "phase" : 0,
         "cache" : false,
         "detailedStats" : false,
