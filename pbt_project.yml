@@ -91,18 +91,18 @@ dependencies:
   createdAt: '2024-09-16T14:02:56.387408Z'
   type: plibPypi
 projectDependencies:
-  '42':
-    projectUID: 42
+  '224':
+    projectUID: 224
     projectName: ProphecySparkBasicsPython
-    repositoryPath: gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_42.git&subPath=
+    repositoryPath: gitUri=http://gitserver:3000/wDp16mGH_team_30/QWF0O8MX_project_224.git&subPath=
     version: 0.2.28.dev6
     isDefault: true
     author: null
     createdAt: '2024-09-16 14:02:38'
-  '43':
-    projectUID: 43
+  '225':
+    projectUID: 225
     projectName: ProphecyWarehousePython
-    repositoryPath: gitUri=http://gitserver:3000/9gt3CHHz_team_9/pJIIcs5r_project_43.git&subPath=
+    repositoryPath: gitUri=http://gitserver:3000/wDp16mGH_team_30/QWF0O8MX_project_225.git&subPath=
     version: 0.0.8
     isDefault: true
     author: null
